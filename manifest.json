@@ -1,0 +1,27 @@
+{
+  "name": "Simple QR Code",
+  "description": "generate qr codes as quick as possible",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "background": {
+    "persistent": false,
+    "scripts": ["main.js"]
+  },
+  "commands": {
+    "generate_qr_code": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "windows": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "Generates QR code"
+    }
+  },
+  "permissions": [
+    "tabs", "activeTab"
+  ],
+  "icons": {
+    "48": "48.png",
+    "128": "128.png"
+  }
+}
