@@ -13,6 +13,14 @@ Generate QR codes from the selected page on a web page, if none, use the current
 
 ![](promo-2.png)
 
+#### there's a context menu now, you can select "Generate QR Code" from the following contexts:
+
+ - selected text
+ - link
+ - page
+
+![](promo-3.png)
+
 ## Hotkey
 
 The hotkey could be configured by going to `chrome://extensions`
