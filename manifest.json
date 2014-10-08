@@ -1,7 +1,7 @@
 {
   "name": "Simple QR Code",
   "description": "generate qr codes as quick as possible",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "manifest_version": 2,
   "background": {
     "persistent": true,
