@@ -3,8 +3,6 @@ var currentWindow;
 chrome.commands.onCommand.addListener(function(command) {
   if (command !== 'generate_qr_code') return;
 
-  console.log('shit');
-
   chrome.tabs.executeScript({
     code: 'window.getSelection().toString();'
   }, function(result) {
@@ -44,8 +42,6 @@ function renderCode(text) {
     focused: true,
     url: 'render.html'
   };
-
-  console.log('text is %j', text);
 
   if (currentWindow) {
     chrome.windows.update(currentWindow.id, { focused: true }, sendMessage);
