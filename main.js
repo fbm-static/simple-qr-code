@@ -17,9 +17,11 @@ chrome.commands.onCommand.addListener(function(command) {
   });
 });
 
-chome.runtime.onInstalled.addListener(createMenus);
-chome.runtime.onStartup.addListener(createMenus);
-
+chrome.contextMenus.create({
+  title: 'Generate QR Code',
+  id: 'simpleQrCodeG',
+  contexts: ['all']
+});
 
 chrome.contextMenus.onClicked.addListener(function (req) {
   if (req.menuItemId !== 'simpleQrCodeG') return;
@@ -31,14 +33,6 @@ chrome.windows.onRemoved.addListener(function (windowId) {
     currentWindow = null;
   }
 });
-
-function createMenus() {
-  chrome.contextMenus.create({
-    title: 'Generate QR Code',
-    id: 'simpleQrCodeG',
-    contexts: ['all']
-  });
-}
 
 function renderCode(text) {
   var options = {
