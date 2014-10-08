@@ -2,9 +2,9 @@
   "name": "Simple QR Code",
   "description": "generate qr codes as quick as possible",
   "version": "0.1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "background": {
-    "persistent": false,
+    "persistent": true,
     "scripts": ["main.js"]
   },
   "commands": {
@@ -18,7 +18,7 @@
     }
   },
   "permissions": [
-    "tabs", "activeTab"
+    "tabs", "activeTab", "contextMenus"
   ],
   "icons": {
     "48": "48.png",
